@@ -48,12 +48,12 @@ string getCPUUsage() {
 
 void Method(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
-  string currUtilization = getCPUUsage();
-  args.GetReturnValue().Set(String::NewFromUtf8(isolate, currUtilization.c_str(), NewStringType::kNormal).ToLocalChecked());
+  string currUsage = getCPUUsage();
+  args.GetReturnValue().Set(String::NewFromUtf8(isolate, currUsage.c_str(), NewStringType::kNormal).ToLocalChecked());
 }
 
 void init(Local<Object> exports) {
-  NODE_SET_METHOD(exports, "hello", Method);
+  NODE_SET_METHOD(exports, "getCPUUsage", Method);
 }
 
 NODE_MODULE(addon, init)

@@ -12,7 +12,7 @@
     <div id="main" style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
       var addon = require("./build/Release/addon");
-      var lastMeasure = addon.hello().split(" ")
+      var lastMeasure = addon.getCPUUsage().split(" ")
 
       var dataset = [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -62,7 +62,7 @@
       myChart.setOption(option);
 
       function updateDataset() {
-        var currMeasure = addon.hello().split(" ")
+        var currMeasure = addon.getCPUUsage().split(" ")
         for (let i = 0; i < 60; i++) {
           dataset[i] = dataset[i+1]
         }

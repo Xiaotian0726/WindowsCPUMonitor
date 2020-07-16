@@ -1,10 +1,10 @@
 const { app, BrowserWindow } = require('electron')
 
-function sleep(d){
-  for(var t=Date.now(); Date.now()-t <= d; );
-}
+// function sleep(d){
+//   for(var t=Date.now(); Date.now()-t <= d; );
+// }
 
-var win = null
+// var win = null
 
 function createWindow () {
   // 创建浏览器窗口
