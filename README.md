@@ -1,4 +1,4 @@
-# CPU Monitor
+# Windows CPU Monitor
 
 ## 简介
 windows 上一款仿任务管理器的能够实时显示 CPU 利用率的 `electron` 桌面应用
